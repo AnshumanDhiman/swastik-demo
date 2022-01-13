@@ -1,0 +1,147 @@
+
+.title {
+    font-weight: bold;
+    text-align: left;
+    color : white;
+    margin-left: 10%;
+}
+
+.color_footer {
+    background-color: #003d49;  
+}
+
+.icon1 {
+    color:	#bc2a8d;
+    margin: 0% 5% 10%;
+}
+
+.icon1:hover {
+    transform: scale(1.4);
+    transition: 0.75s;
+}
+
+.icon1:not(:hover) {
+    transition: 0.5s ;
+}
+
+.icon2 {
+    color:	#4267B2;
+    margin: 0% 5% 10%;
+}
+
+.icon2:hover {
+    transform: scale(1.4);
+    transition: 0.75s;
+}
+
+.icon2:not(:hover) {
+    transition: 0.5s ;
+}
+
+.icon3 {
+    color : #1DA1F2;
+    margin: 0% 5% 10%;
+}
+
+.icon3:hover {
+    transform: scale(1.4);
+    transition: 0.75s;
+}
+
+.icon3:not(:hover) {
+    transition: 0.5s ;
+}
+
+.icon4 {
+    color:	#0077b5;
+    margin: 0% 5% 10%;
+}
+
+.icon4:hover {
+    transform: scale(1.4);
+    transition: 0.75s;
+}
+.icon4:not(:hover) {
+    transition: 0.5s ;
+}
+
+
+.list-unstyled {
+    padding: 1%;
+    text-align: left;
+}
+
+.footer_element{
+    color:white;
+    text-decoration: none;
+}
+
+
+.footer_element:hover {
+    color:rgb(234, 238, 26);
+    text-decoration: underline;
+}
+
+.footer_logo_div {
+    text-align: center;
+}
+
+.div-foot-edit {
+
+    margin-top: 15%;
+}
+
+.footer_edit {
+    padding: 0 3%;
+  
+}
+
+.image_footer {
+    width: 15rem;
+    padding: 0 5%;
+}
+
+.content1 {
+    margin-top: 1%;
+    color:white;
+}
+
+.endFooter {
+    text-align: center;
+}
+.btn:hover {
+    transform:scale(1.1);
+    transition: 0.75s ;
+}
+.btn:not(:hover) {
+    transition: 0.5s ;
+}
+
+
+.button_img {
+    width: 40px;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 764px) {
+
+}
+
+@media(max-width: 1024px) {
+    .div-foot-edit {
+        display: none;
+    }
+    .title {
+        margin-left: 43%;
+    }
+    .footer_element {
+        margin-left: 42%;
+        text-align: center;
+    }
+}

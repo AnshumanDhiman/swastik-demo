@@ -1,0 +1,70 @@
+
+.register {
+    width: 400px;
+    color:white;
+    background-color: #003d49;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.register > input {
+    border-radius: 8px;
+    border: 2px solid #dddfe2;
+    outline: none;
+    color: #1d2129;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 92%;
+    font-size: 1rem;
+}
+
+.con_edit {
+
+    width: 100px;
+}
+
+.div_box_edit {
+    text-align: center;
+    padding: 5%;
+    border-radius: 25px;
+    background-color: #003d49;
+}
+
+.c_edit {
+    text-align: center;
+    color: white;
+}
+
+.p_edit {
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .register {
+       margin-left: 15%;
+    }
+
+    .img-swast {
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .register {
+        margin-left: 20%;
+    }
+    .img-swast {
+      display:none;     
+    }
+    .div_box_edit {
+        margin-left: 25%;
+        width: 50%;
+    }
+}
+
+
