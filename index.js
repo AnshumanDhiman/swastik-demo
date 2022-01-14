@@ -7,7 +7,7 @@ app.use(express.json())
 app.use(express.urlencoded())
 app.use(cors())
 
-const DB = "mongodb+srv://test_user:<testuser>@cluster0.gpeoj.mongodb.net/SwastikData?retryWrites=true&w=majority";
+const DB = "mongodb://localhost:27017/SwastikData";
 
 mongoose.connect(DB , {
     useNewUrlParser: true,
@@ -23,22 +23,6 @@ const userSchema = new mongoose.Schema({
 })
 
 const User = new mongoose.model("User", userSchema)
-
-//Routes
-app.post("/login", (req, res)=> {
-    const { email, password} = req.body
-    User.findOne({ email: email}, (err, user) => {
-        if(user){
-            if(password === user.password ) {
-                res.send({message: "Login Successfull", user: user})
-            } else {
-                res.send({ message: "Password didn't match"})
-            }
-        } else {
-            res.send({message: "User not registered"})
-        }
-    })
-}) 
 
 app.post("/register", (req, res)=> {
     const { name, email, password} = req.body
@@ -63,8 +47,24 @@ app.post("/register", (req, res)=> {
     
 }) 
 
+app.post("/login", (req, res)=> {
+    const { email, password} = req.body
+    User.findOne({ email: email}, (err, user) => {
+        if(user){
+            if(password === user.password ) {
+                res.send({message: "Login Successfull", user: user})
+            } else {
+                res.send({ message: "Password didn't match"})
+            }
+        } else {
+            res.send({message: "User not registered"})
+        }
+    })
+}) 
+
+
 if(process.env.NODE_ENV=="production") {
-    app.use(express.static("frontend/build"))
+    app.use(express.static(""))
 }
 
 const PORT = process.env.PORT || 9002;
